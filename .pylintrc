@@ -1,3 +1,5 @@
 [FORMAT]
 indent-string=\t
 max-line-length=150
+# Defaults are up to "_", extra names are added at the end
+good-names=i,j,k,ex,Run,_,db
