@@ -13,6 +13,7 @@ def main_menu(c: MySQLConnection) -> None:
 			"View Books (B)\n"
 			+ "View Store Locations (S)\n"
 			+ "My Account (A)\n"
+			+ "Quit (Q)\n"
 		).lower():
 			case "b":
 				print_books(c)
@@ -20,6 +21,8 @@ def main_menu(c: MySQLConnection) -> None:
 				print_locations(c)
 			case "a":
 				account_menu(c)
+			case "q":
+				return
 
 def print_books(c: MySQLConnection, user_id: int|None = None, exclude_wishlist: bool = True) -> None:
 	"""Print books 5 at a time. Optionally print only books from a wishlist, or all books except a wishlist."""
